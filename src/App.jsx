@@ -2,6 +2,7 @@ import { useEffect } from 'react'
 import {BrowserRouter,Routes,Route} from "react-router-dom"
 import { fetchDataFromApi } from './utils/api'
 import './App.css'
+import PageNotFound from './pages/404/pageNotFound'
 import {useSelector,useDispatch} from 'react-redux';
 import { getApiConfiguration,getGenres } from './store/homeSlice';
 import Home from './pages/home/Home';
@@ -72,7 +73,7 @@ function App() {
         <Route path="/:mediaType/:id" element={<Details/>}/>
         <Route path="/search/:query" element={<SearchResult/>}/>
         <Route path="/explore/:mediaType" element={<Explore/>}/>
-        <Route path="*" element={<pageNotFound/>} />
+        <Route path="*" element={<PageNotFound/>} />
       </Routes>
       <Footer/>
       </BrowserRouter>
