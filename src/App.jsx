@@ -2,7 +2,7 @@ import { useEffect } from 'react'
 import {BrowserRouter,Routes,Route} from "react-router-dom"
 import { fetchDataFromApi } from './utils/api'
 import './App.css'
-import PageNotFound from './pages/404/pageNotFound'
+import PageNotFound from './pages/404/PageNotFound'
 import {useSelector,useDispatch} from 'react-redux';
 import { getApiConfiguration,getGenres } from './store/homeSlice';
 import Home from './pages/home/Home';
